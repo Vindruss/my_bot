@@ -7,8 +7,8 @@ def generate_launch_description():
     return LaunchDescription([
 
         Node(
-            package='rplidar_ros',
-            executable='rplidar_c1_launch.py',
+            package='sllidar_ros',
+            executable='sllidar_c1_launch.py',
             output='screen',
             parameters=[{
                 'frame_id': 'laser_frame'
