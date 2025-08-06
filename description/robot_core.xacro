@@ -126,7 +126,7 @@
 
 
     <!-- LEFT WHEEL LINK -->
-
+<!--
     <joint name="left_back_wheel_joint" type="continuous">
         <parent link="base_link"/>
         <child link="left_back_wheel"/>
@@ -181,7 +181,7 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
-
+-->
 
 
   
