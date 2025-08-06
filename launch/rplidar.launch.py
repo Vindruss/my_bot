@@ -7,7 +7,7 @@ def generate_launch_description():
     return LaunchDescription([
 
         Node(
-            package='sllidar_ros',
+            package='sllidar_ros2',
             executable='sllidar_c1_launch.py',
             output='screen',
             parameters=[{
