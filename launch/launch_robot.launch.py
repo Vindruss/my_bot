@@ -49,7 +49,7 @@ def generate_launch_description():
     delayed_controller_manager = TimerAction(period=3.0, actions=[controller_manager])
 
     mecanumbot_drive_controller_spawner = Node(
-        package="mecanumbot_drive_controller,
+        package="controller_manager,
         executable="spawner.py",
         arguments=["mecanumbot_drive_controller"],
     )
