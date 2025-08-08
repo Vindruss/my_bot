@@ -48,16 +48,16 @@ def generate_launch_description():
 
     delayed_controller_manager = TimerAction(period=3.0, actions=[controller_manager])
 
-    mecanumbot_drive_controller_spawner = Node(
+    mecanum_drive_controller_spawner = Node(
         package="controller_manager,
         executable="spawner.py",
-        arguments=["mecanumbot_drive_controller"],
+        arguments=["mecanum_drive_controller"],
     )
 
-    delayed_mecanumbot_drive_controller_spawner = RegisterEventHandler(
+    delayed_mecanum_drive_controller_spawner = RegisterEventHandler(
         event_handler=OnProcessStart(
             target_action=controller_manager,
-            on_start=[mecanumbot_drive_controller_spawner],
+            on_start=[mecanum_drive_controller_spawner],
         )
     )
 
@@ -98,7 +98,7 @@ def generate_launch_description():
         rsp,
         # joystick,
         # twist_mux,
-        # delayed_controller_manager,
-        delayed_mecanumbot_drive_controller_spawner,
+        delayed_controller_manager,
+        delayed_mecanum_drive_controller_spawner,
         delayed_joint_broad_spawner
     ])
