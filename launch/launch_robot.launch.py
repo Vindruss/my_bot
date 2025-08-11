@@ -96,6 +96,6 @@ def generate_launch_description():
         # joystick,
         # twist_mux,
         delayed_controller_manager,
-        delayed_mecanum_drive_controller_spawner,
+        delayed_mecanum_controller_spawner,
         delayed_joint_broad_spawner
     ])
