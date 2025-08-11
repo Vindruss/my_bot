@@ -48,16 +48,16 @@ def generate_launch_description():
 
     delayed_controller_manager = TimerAction(period=3.0, actions=[controller_manager])
 
-    mecanum_drive_controller_spawner = Node(
+    mecanum_controller_spawner = Node(
         package="controller_manager,
         executable="spawner.py",
-        arguments=["mecanum_drive_controller"],
+        arguments=["mecanum_controller"],
     )
 
-    delayed_mecanum_drive_controller_spawner = RegisterEventHandler(
+    delayed_mecanum_controller_spawner = RegisterEventHandler(
         event_handler=OnProcessStart(
             target_action=controller_manager,
-            on_start=[mecanum_drive_controller_spawner],
+            on_start=[mecanum_controller_spawner],
         )
     )
 
