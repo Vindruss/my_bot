@@ -11,10 +11,6 @@ from launch.actions import RegisterEventHandler
 from launch.event_handlers import OnProcessStart
 from launch_ros.actions import Node
 
-from launch_ros.actions import Node
-
-
-
 def generate_launch_description():
 
 
@@ -50,7 +46,7 @@ def generate_launch_description():
     delayed_controller_manager = TimerAction(period=3.0, actions=[controller_manager])
 
     mecanum_controller_spawner = Node(
-        package="controller_manager,
+        package="controller_manager",
         executable="spawner.py",
         arguments=["mecanum_controller"],
     )
