@@ -47,7 +47,7 @@ def generate_launch_description():
 
     mecanum_controller_spawner = Node(
         package="controller_manager",
-        executable="spawner.py",
+        executable="spawner",
         arguments=["mecanum_controller"],
     )
 
@@ -60,7 +60,7 @@ def generate_launch_description():
 
     joint_broad_spawner = Node(
         package="controller_manager",
-        executable="spawner.py",
+        executable="spawner",
         arguments=["joint_broad"],
     )
 
