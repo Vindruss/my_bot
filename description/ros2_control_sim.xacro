@@ -8,7 +8,7 @@
     <param name="mock_sensor_commands">false</param>
     <param name="position_state_following_offset">0.0</param>
   </hardware>
-  <joint name="front_left_wheel_joint">
+  <joint name="joint1">
     <command_interface name="position"/>
     <command_interface name="velocity"/>
     <state_interface name="position">
@@ -17,7 +17,7 @@
     <state_interface name="velocity"/>
     <state_interface name="acceleration"/>
   </joint>
-  <joint name="front_right_wheel_joint">
+  <joint name="joint2">
     <command_interface name="velocity"/>
     <command_interface name="acceleration"/>
     <state_interface name="position">
@@ -27,7 +27,7 @@
     <state_interface name="velocity"/>
     <state_interface name="acceleration"/>
   </joint>
-  <joint name="rear_left_wheel_joint">
+  <joint name="joint3">
     <command_interface name="position"/>
     <command_interface name="velocity"/>
     <state_interface name="position">
@@ -36,7 +36,7 @@
     <state_interface name="velocity"/>
     <state_interface name="acceleration"/>
   </joint>
-  <joint name="rear_right_wheel_joint">
+  <joint name="joint4">
     <command_interface name="velocity"/>
     <command_interface name="acceleration"/>
     <state_interface name="position">
