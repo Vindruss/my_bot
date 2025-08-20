@@ -5,10 +5,10 @@ controller_manager:
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
-    mecanum_drive_controller:
+    mecanum_controller:
       type: mecanum_drive_controller/MecanumDriveController
 
-mecanum_drive_controller:
+mecanum_controller:
   ros__parameters:
     reference_timeout: 5.0
 
