@@ -48,7 +48,7 @@ def generate_launch_description():
     mecanum_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["mecanum_drive_controller"],
+        arguments=["mecanum_drive_controller", "--controller-manager", "/controller_manager"],
     )
 
     delayed_mecanum_controller_spawner = RegisterEventHandler(
@@ -61,7 +61,7 @@ def generate_launch_description():
     joint_broad_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["joint_state_broadcaster"],
+        arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
     )
 
     delayed_joint_broad_spawner = RegisterEventHandler(
