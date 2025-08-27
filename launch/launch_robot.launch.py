@@ -58,19 +58,32 @@ def generate_launch_description():
         )
     )
 
-    joint_state_broadcaster_spawner = Node(
+    joint_broad_spawner = Node(
         package="controller_manager",
-        executable="spawner",
-        arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
+        executable="spawner.py",
+        arguments=["joint_broad"],
     )
 
-
-    delayed_joint_state_broadcaster_spawner = RegisterEventHandler(
+    delayed_joint_broad_spawner = RegisterEventHandler(
         event_handler=OnProcessStart(
             target_action=controller_manager,
-            on_start=[joint_state_broadcaster_spawner],
+            on_start=[joint_broad_spawner],
         )
     )
+
+    #joint_state_broadcaster_spawner = Node(
+    #    package="controller_manager",
+    #    executable="spawner",
+    #    arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
+    #)
+
+
+    #delayed_joint_state_broadcaster_spawner = RegisterEventHandler(
+    #    event_handler=OnProcessStart(
+    #        target_action=controller_manager,
+    #        on_start=[joint_state_broadcaster_spawner],
+    #    )
+    #)
 
 
     # Code for delaying a node (I haven't tested how effective it is)
@@ -98,5 +111,5 @@ def generate_launch_description():
         # twist_mux,
         delayed_controller_manager,
         delayed_mecanum_controller_spawner,
-        delayed_joint_state_broadcaster_spawner
+        delayed_joint_broad_spawner
     ])
