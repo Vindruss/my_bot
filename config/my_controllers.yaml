@@ -27,3 +27,5 @@ mecanum_controller:
     enable_odom_tf: true
     pose_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.001]
     twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.001]
+
+    use_stamped_vel: false
