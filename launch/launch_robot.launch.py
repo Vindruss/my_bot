@@ -60,7 +60,7 @@ def generate_launch_description():
 
     joint_broad_spawner = Node(
         package="controller_manager",
-        executable="spawner",
+        executable="spawner.py",
         arguments=["joint_state_broadcaster"],
     )
 
