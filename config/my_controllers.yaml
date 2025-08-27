@@ -19,8 +19,8 @@ mecanum_drive_controller:
 
     kinematics:
       base_frame_offset: { x: 1.0, y: 2.0, theta: 3.0 }
-      wheels_radius: 0.05
-      sum_of_robot_center_projection_on_X_Y_axis: 0.2925
+      wheels_radius: 0.011
+      sum_of_robot_center_projection_on_X_Y_axis: 0.0
 
     base_frame_id: "base_link"
     odom_frame_id: "odom"
