@@ -50,7 +50,7 @@ def generate_launch_description():
     mecanum_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["mecanum_drive_controller", "--controller-manager", "/controller_manager"],
+        arguments=["mecanum_controller", "--controller-manager", "/controller_manager"],
     )
 
     delayed_mecanum_controller_spawner = RegisterEventHandler(
