@@ -19,7 +19,7 @@ mecanum_controller:
 
     base_frame_id: "base_link"
     odom_frame_id: "odom"
-    enable_odom_tf: true
+    enable_odom_tf: false
 
     kinematics:
       base_frame_offset: { x: 1.0, y: 2.0, theta: 3.0 }
