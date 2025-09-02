@@ -54,6 +54,14 @@
     <link name="base_footprint">
     </link>
 
+    <!-- CHASSIS LINK -->
+
+    <joint name="chassis_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="chassis"/>
+        <origin xyz="0 0 0"/>
+    </joint>
+
     <link name="chassis">
         <visual>
             <origin xyz="0 0 ${chassis_height/2}"/>
