@@ -17,14 +17,16 @@ mecanum_drive_controller:
     rear_right_wheel_command_joint_name: "rear_right_wheel_joint"
     rear_left_wheel_command_joint_name: "rear_left_wheel_joint"
 
+    base_frame_id: "base_link"
+    odom_frame_id: "odom"
+    enable_odom_tf: true
+
     kinematics:
       base_frame_offset: { x: 1.0, y: 2.0, theta: 3.0 }
       wheels_radius: 0.055
       sum_of_robot_center_projection_on_X_Y_axis: 0.2925
 
-    base_frame_id: "base_linker"
-    odom_frame_id: "odom"
-    enable_odom_tf: true
+    
     pose_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.001]
     twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.001]
 
