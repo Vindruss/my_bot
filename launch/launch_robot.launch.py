@@ -53,7 +53,7 @@ def generate_launch_description():
         #arguments=["mecanum_controller", "--controller-manager", "/controller_manager"],
         arguments=["mecanum_controller"],
         remappings=[
-            ('/mecanum_controller/odomentry', '/odom')       
+            ('/odom', '/mecanum_controller/odomentry')       
             ]
     )
 
