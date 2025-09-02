@@ -17,9 +17,10 @@ mecanum_controller:
     rear_right_wheel_command_joint_name: "rear_right_wheel_joint"
     rear_left_wheel_command_joint_name: "rear_left_wheel_joint"
 
+    tf_frame_prefix: "tf_frame"
     base_frame_id: "base_link"
     odom_frame_id: "odom"
-    enable_odom_tf: false
+    enable_odom_tf: true
 
     kinematics:
       base_frame_offset: { x: 1.0, y: 2.0, theta: 3.0 }
@@ -30,5 +31,5 @@ mecanum_controller:
     pose_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.001]
     twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.001]
 
-    use_stamped_vel: false
+    #use_stamped_vel: false
     in_chained_mode: false
