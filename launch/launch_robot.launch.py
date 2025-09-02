@@ -52,6 +52,9 @@ def generate_launch_description():
         executable="spawner",
         #arguments=["mecanum_controller", "--controller-manager", "/controller_manager"],
         arguments=["mecanum_controller"],
+        remappings=[
+            ('/mecanum_controller/odomentry', '/odom')       
+            ]
     )
 
     delayed_mecanum_controller_spawner = RegisterEventHandler(
