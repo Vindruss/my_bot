@@ -25,13 +25,13 @@ def generate_launch_description():
             remappings=[('/cmd_vel','/cmd_vel_joy')]
          )
 
-    twist_stamper = Node(
-            package='twist_stamper',
-            executable='twist_stamper',
-            parameters=[{'use_sim_time': use_sim_time}],
-             remappings=[('/cmd_vel_in','/mecanum_controller/reference_unstamped'),
-                        ('/cmd_vel_out','/mecanum_controller/reference')]
-        )
+    # twist_stamper = Node(
+    #         package='twist_stamper',
+    #         executable='twist_stamper',
+    #         parameters=[{'use_sim_time': use_sim_time}],
+    #          remappings=[('/cmd_vel_in','/mecanum_controller/reference_unstamped'),
+    #                     ('/cmd_vel_out','/mecanum_controller/reference')]
+    #     )
 
 
     return LaunchDescription([

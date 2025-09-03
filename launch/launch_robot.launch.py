@@ -38,6 +38,14 @@ def generate_launch_description():
             remappings=[('/cmd_vel_out','/mecanum_controller/reference_unstamped')]
         )
 
+    twist_stamper = Node(
+        package='twist_stamper',
+        executable='twist_stamper',
+        parameters=[{'use_sim_time': use_sim_time}],
+            remappings=[('/cmd_vel_in','/mecanum_controller/reference_unstamped'),
+                    ('/cmd_vel_out','/mecanum_controller/reference')]
+    )
+
 
     robot_description = Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])
 
