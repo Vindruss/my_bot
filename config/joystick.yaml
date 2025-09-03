@@ -19,7 +19,7 @@ teleop_node:
     axis_angular:
       yaw: -1
 
-    publish_stamped_twist: true
+    #publish_stamped_twist: true
     enable_button: 7
     enable_turbo_button: 8
 
