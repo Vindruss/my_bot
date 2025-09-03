@@ -12,7 +12,7 @@ from launch.event_handlers import OnProcessStart
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    use_sim_time = LaunchConfiguration('use_sim_time')
+    
 
     # Include the robot_state_publisher launch file, provided by our own package. Force sim time to be enabled
     # !!! MAKE SURE YOU SET THE PACKAGE NAME CORRECTLY !!!
@@ -41,7 +41,7 @@ def generate_launch_description():
     twist_stamper = Node(
         package='twist_stamper',
         executable='twist_stamper',
-        parameters=[{'use_sim_time': use_sim_time}],
+        #parameters=[{'use_sim_time': use_sim_time}],
             remappings=[('/cmd_vel_in','/mecanum_controller/reference_unstamped'),
                     ('/cmd_vel_out','/mecanum_controller/reference')]
     )
