@@ -25,7 +25,7 @@ mecanum_controller:
       wheel_base: 0.385
       wheel_separation: 0.575
       base_frame_offset: { x: 0.0, y: 0.0, theta: 0.0 }
-      wheels_radius: 0.055
+      wheels_radius: 0.052
       sum_of_robot_center_projection_on_X_Y_axis: 1.0
       #base_frame_offset: { x: 1.0, y: 2.0, theta: 3.0 }
       #wheels_radius: 0.055
