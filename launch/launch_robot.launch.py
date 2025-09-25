@@ -34,7 +34,7 @@ def generate_launch_description():
     twist_mux = Node(
             package="twist_mux",
             executable="twist_mux",
-            parameters=[twist_mux_params],
+                        parameters=[twist_mux_params],
             remappings=[('/cmd_vel_out','/mecanum_controller/reference_unstamped')]
         )
 
