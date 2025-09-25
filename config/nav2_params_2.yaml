@@ -183,7 +183,7 @@ controller_server:
       TwirlingCritic:
         enabled: true
         twirling_cost_power: 1
-        twirling_cost_weight: 10.0
+        twirling_cost_weight: 20.0
 
 local_costmap:
   local_costmap:
