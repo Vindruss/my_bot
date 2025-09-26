@@ -134,6 +134,7 @@ def generate_launch_description():
     # Launch them all!
     return LaunchDescription([
         rsp,
+        lidar,
         # joystick,
         twist_mux,
         twist_stamper,
