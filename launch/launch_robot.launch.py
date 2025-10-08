@@ -27,7 +27,19 @@ def generate_launch_description():
 
     lidar = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory(package_name),'launch','rplidar_c1_launch.py'
+                    get_package_share_directory(package_name),'launch','rplidar_c1_launch_l1.py'
+                )])
+    )
+
+    lidar2 = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([os.path.join(
+                    get_package_share_directory(package_name),'launch','rplidar_c1_launch_l2.py'
+                )])
+    )
+
+    lidar_merger = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([os.path.join(
+                    get_package_share_directory(package_name),'launch','merge_2_scan.launch.py'
                 )])
     )
 
@@ -135,6 +147,8 @@ def generate_launch_description():
     return LaunchDescription([
         rsp,
         lidar,
+        lidar2,
+        lidar_merger,
         # joystick,
         twist_mux,
         twist_stamper,
