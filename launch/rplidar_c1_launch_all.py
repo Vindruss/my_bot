@@ -43,7 +43,7 @@ def generate_launch_description():
                          'flip_x_axis': flip_x_axis}],
             output='screen')
 
-    lidar1 = Node(
+    lidar2 = Node(
         package='rplidar_ros',
             executable='rplidar_node',
             name='rplidar_node',
