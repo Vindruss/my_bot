@@ -32,7 +32,7 @@ def generate_launch_description():
         package='rplidar_ros',
             executable='rplidar_node',
             name='rplidar_node',
-            parameters=[{'channel_type':'serial,
+            parameters=[{'channel_type':'serial',
                          'serial_port': '/dev/ttyUSB1',
                          'serial_baudrate': '460800',
                          'frame_id': 'laser_frame',
