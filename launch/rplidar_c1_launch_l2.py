@@ -8,6 +8,7 @@ from launch.actions import DeclareLaunchArgument
 from launch.actions import LogInfo
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
+import time
 
 
 def generate_launch_description():
@@ -21,7 +22,7 @@ def generate_launch_description():
     topic_name = LaunchConfiguration('topic_name', default='scan2')
     flip_x_axis = LaunchConfiguration('flip_x_axis', default='false')
 
-    
+    time.sleep(4000)
     return LaunchDescription([
         DeclareLaunchArgument(
             'channel_type',
