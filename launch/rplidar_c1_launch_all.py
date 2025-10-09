@@ -17,7 +17,7 @@ def generate_launch_description():
         package='rplidar_ros',
             executable='rplidar_node',
             name='rplidar_node',
-            parameters=[{'channel_type':'serial,
+            parameters=[{'channel_type':'serial',
                          'serial_port': '/dev/ttyUSB0',
                          'serial_baudrate': '460800',
                          'frame_id': 'laser_frame',
@@ -28,7 +28,7 @@ def generate_launch_description():
                          'flip_x_axis': 'false'}],
             output='screen')
 
-    lidar1 = Node(
+    lidar2 = Node(
         package='rplidar_ros',
             executable='rplidar_node',
             name='rplidar_node',
