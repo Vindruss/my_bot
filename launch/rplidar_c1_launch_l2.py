@@ -22,8 +22,8 @@ def generate_launch_description():
     topic_name = LaunchConfiguration('topic_name', default='scan2')
     flip_x_axis = LaunchConfiguration('flip_x_axis', default='false')
 
-    time.sleep(4)
     
+
     return LaunchDescription([
         DeclareLaunchArgument(
             'channel_type',

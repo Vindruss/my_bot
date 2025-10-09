@@ -25,17 +25,23 @@ def generate_launch_description():
                 )]), launch_arguments={'use_sim_time': 'false', 'use_ros2_control': 'true'}.items()
     )
 
-    lidar = IncludeLaunchDescription(
-                PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory(package_name),'launch','rplidar_c1_launch_l1.py'
-                )])
-    )
+    # lidar = IncludeLaunchDescription(
+    #             PythonLaunchDescriptionSource([os.path.join(
+    #                 get_package_share_directory(package_name),'launch','rplidar_c1_launch_l1.py'
+    #             )])
+    # )
 
     
 
-    lidar2 = IncludeLaunchDescription(
+    # lidar2 = IncludeLaunchDescription(
+    #             PythonLaunchDescriptionSource([os.path.join(
+    #                 get_package_share_directory(package_name),'launch','rplidar_c1_launch_l2.py'
+    #             )])
+    # )
+
+    lidars = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory(package_name),'launch','rplidar_c1_launch_l2.py'
+                    get_package_share_directory(package_name),'launch','rplidar_c1_launch_all.py'
                 )])
     )
 
@@ -65,6 +71,7 @@ def generate_launch_description():
             remappings=[('/cmd_vel_in','/mecanum_controller/reference_unstamped'),
                     ('/cmd_vel_out','/mecanum_controller/reference')]
     )
+
 
 
     robot_description = Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])
@@ -148,8 +155,7 @@ def generate_launch_description():
     # Launch them all!
     return LaunchDescription([
         rsp,
-        lidar,
-        lidar2,
+        lidars,
         lidar_merger,
         # joystick,
         twist_mux,
