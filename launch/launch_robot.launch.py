@@ -124,7 +124,7 @@ def generate_launch_description():
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory(package_name),'launch','online_async_launch.py'
                 )]), launch_arguments={'params_file': './src/my_bot/config/mapper_params_online_async.yaml'}.items()
-    )◙
+    )
 
     #joint_state_broadcaster_spawner = Node(
     #    package="controller_manager",
