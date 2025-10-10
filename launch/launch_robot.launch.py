@@ -126,6 +126,17 @@ def generate_launch_description():
                 )]), launch_arguments={'params_file': './src/my_bot/config/mapper_params_online_async.yaml'}.items()
     )
 
+    nav = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([os.path.join(
+                    get_package_share_directory(package_name),'launch','navigation_launch.py'
+                )]), launch_arguments={'params_file': './src/my_bot/config/nav2_params.yaml'}.items()
+    )
+
+    tcp_server = Node(
+        package="tcp_server",
+        executable="talker",
+    )
+
     #joint_state_broadcaster_spawner = Node(
     #    package="controller_manager",
     #    executable="spawner",
@@ -170,6 +181,7 @@ def generate_launch_description():
         delayed_controller_manager,
         delayed_mecanum_controller_spawner,
         delayed_joint_broad_spawner,
-        slam
-
+        slam,
+        nav,
+        tcp_server
     ])
