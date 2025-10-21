@@ -132,10 +132,10 @@ def generate_launch_description():
     #             )]), launch_arguments={'params_file': './src/my_bot/config/nav2_params.yaml'}.items()
     # )
 
-    tcp_server = Node(
-        package="tcp_server",
-        executable="talker",
-    )
+    # tcp_server = Node(
+    #     package="tcp_server",
+    #     executable="talker",
+    # )
 
     #joint_state_broadcaster_spawner = Node(
     #    package="controller_manager",
@@ -183,5 +183,5 @@ def generate_launch_description():
         delayed_joint_broad_spawner,
         slam,
         # nav,
-        tcp_server
+        # tcp_server
     ])
