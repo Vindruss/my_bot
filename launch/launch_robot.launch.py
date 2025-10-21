@@ -181,7 +181,7 @@ def generate_launch_description():
         delayed_controller_manager,
         delayed_mecanum_controller_spawner,
         delayed_joint_broad_spawner,
-        slam,
+        slam
         # nav,
         # tcp_server
     ])
