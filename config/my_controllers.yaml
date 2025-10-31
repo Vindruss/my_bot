@@ -1,6 +1,6 @@
 controller_manager:
   ros__parameters:
-    update_rate: 30
+    update_rate: 5
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
@@ -21,7 +21,6 @@ mecanum_controller:
     odom_frame_id: "odom"
     enable_odom_tf: true
 
-    update_rate: 20
 
     kinematics:
       wheel_base: 0.385
