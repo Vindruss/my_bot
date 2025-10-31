@@ -21,6 +21,8 @@ mecanum_controller:
     odom_frame_id: "odom"
     enable_odom_tf: true
 
+    update_rate: 20
+
     kinematics:
       wheel_base: 0.385
       wheel_separation: 0.575

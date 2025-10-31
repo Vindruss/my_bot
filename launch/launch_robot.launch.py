@@ -62,7 +62,7 @@ def generate_launch_description():
             executable="twist_mux",
                         parameters=[twist_mux_params],
             remappings=[('/cmd_vel_out','/mecanum_controller/reference_unstamped')]
-        )
+    )
 
     twist_stamper = Node(
         package='twist_stamper',
@@ -132,10 +132,10 @@ def generate_launch_description():
                 )]), launch_arguments={'params_file': './src/my_bot/config/nav2_params.yaml'}.items()
     )
 
-    tcp_server = Node(
-        package="tcp_server",
-        executable="talker",
-    )
+    # tcp_server = Node(
+    #     package="tcp_server",
+    #     executable="talker",
+    # )
 
     #joint_state_broadcaster_spawner = Node(
     #    package="controller_manager",
