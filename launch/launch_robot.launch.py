@@ -123,7 +123,7 @@ def generate_launch_description():
     slam = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory(package_name),'launch','online_async_launch.py'
-                )]), launch_arguments={'params_file': './src/my_bot/config/mapper_params_online_async.yaml'}.items()
+                )]), launch_arguments={'slam_params_file': './src/my_bot/config/mapper_params_online_async.yaml'}.items()
     )
 
     nav = IncludeLaunchDescription(
@@ -180,8 +180,8 @@ def generate_launch_description():
         twist_stamper,
         delayed_controller_manager,
         delayed_mecanum_controller_spawner,
-        delayed_joint_broad_spawner
-        #slam
+        delayed_joint_broad_spawner,
+        slam
         # nav,
         # tcp_server
     ])
