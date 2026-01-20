@@ -1,6 +1,6 @@
 ekf_filter_node:
   ros__parameters:
-    frequency: 30.0
+    frequency: 5.0
     two_d_mode: true                       # planární robot :contentReference[oaicite:10]{index=10}
     publish_tf: true
 
@@ -12,16 +12,21 @@ ekf_filter_node:
     odom0: /odom
     odom0_config: [true,  true,  false,
                    false, false, true,
-                   true,  true,  false,
-                   false, false, true,
+                   true,  false, false,
+                   false, false, false,
                    false, false, false]
     odom0_differential: false
+    odom0_relative: false
+    odom0_queue_size: 10
 
-    imu0: /imu
+    # IMU: použij jen yaw_rate (angular_velocity.z)
+    imu0: /imu   # pokud publikuješ na /imu/data, změň na /imu/data
     imu0_config: [false, false, false,
-                  false, false, true,     # yaw
                   false, false, false,
-                  false, false, true,     # yaw rate
-                  false, false, false]    # accel typicky vypnuto pro 2D diff-drive start
+                  false, false, false,
+                  false, false, true,
+                  false, false, false]
     imu0_differential: false
+    imu0_relative: false
+    imu0_queue_size: 10
     imu0_remove_gravitational_acceleration: false
