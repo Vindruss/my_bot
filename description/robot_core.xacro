@@ -43,6 +43,26 @@
 
     </link>
 
+    <!-- IMU frame -->
+    <link name="imu_link">
+    <!-- vizuál/kolize jsou volitelné; pro TF stačí samotný link -->
+    <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
+    </inertial>
+    </link>
+
+    <!-- Fixed transform base_link -> imu_link -->
+    <joint name="base_to_imu" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+
+    <!-- Umístění IMU vůči base_link (v metrech) -->
+    <origin xyz="0.055 -0.033 0.21" rpy="0 0 0"/>
+    </joint>
+
+
      <!-- BASE_FOOTPRINT LINK -->
 
     <joint name="base_footprint_joint" type="fixed">
