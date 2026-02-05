@@ -2,8 +2,7 @@ scan_to_scan_filter_chain:
   ros__parameters:
     filter1:
       name: keep_270deg
-      type: laser_filters/LaserScanAngularBoundsFilterInPlace
+      type: laser_filters/LaserScanAngularBoundsFilter
       params:
         lower_angle: 0.0
-        upper_angle: 1.57079632679
-        replace_with_nan: false
+        upper_angle: 3.14
