@@ -17,10 +17,11 @@ def generate_launch_description():
     serial_port2 = LaunchConfiguration('serial_port', default='/dev/ttyUSB1')
     serial_baudrate = LaunchConfiguration('serial_baudrate', default='460800')
     frame_id = LaunchConfiguration('frame_id', default='laser_frame')
+    frame_id2 = LaunchConfiguration('frame_id', default='laser_frame2')
     inverted = LaunchConfiguration('inverted', default='false')
     angle_compensate = LaunchConfiguration('angle_compensate', default='true')
     scan_mode = LaunchConfiguration('scan_mode', default='Standard')
-    topic_name = LaunchConfiguration('topic_name', default='scan1')
+    topic_name = LaunchConfiguration('topic_name', default='scan')
     topic_name2 = LaunchConfiguration('topic_name', default='scan2')
     flip_x_axis = LaunchConfiguration('flip_x_axis', default='false')
 
@@ -50,7 +51,7 @@ def generate_launch_description():
             parameters=[{'channel_type':channel_type,
                             'serial_port': serial_port2,
                             'serial_baudrate': serial_baudrate,
-                            'frame_id': frame_id,
+                            'frame_id': frame_id2,
                             'inverted': inverted,
                             'angle_compensate': angle_compensate,
                             'scan_mode': scan_mode,
