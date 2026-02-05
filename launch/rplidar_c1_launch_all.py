@@ -61,7 +61,7 @@ def generate_launch_description():
     
 
     return LaunchDescription([
-        lidar1,
-        lidar2
+        lidar1
+        #lidar2
     ])
 
