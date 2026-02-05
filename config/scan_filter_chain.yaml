@@ -4,5 +4,5 @@ scan_to_scan_filter_chain:
       name: keep_270deg
       type: laser_filters/LaserScanAngularBoundsFilter
       params:
-        lower_angle: 0.0
-        upper_angle: 3.14
+        lower_angle: 1.570796
+        upper_angle: -1.570796
