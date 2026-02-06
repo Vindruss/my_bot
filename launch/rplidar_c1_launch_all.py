@@ -13,8 +13,8 @@ import time
 
 def generate_launch_description():
     channel_type =  LaunchConfiguration('channel_type', default='serial')
-    serial_port = LaunchConfiguration('serial_port', default='/dev/ttyUSB1')
-    serial_port2 = LaunchConfiguration('serial_port', default='/dev/ttyUSB0')
+    serial_port = LaunchConfiguration('serial_port', default='/dev/ttyUSB0')
+    serial_port2 = LaunchConfiguration('serial_port', default='/dev/ttyUSB1')
     serial_baudrate = LaunchConfiguration('serial_baudrate', default='460800')
     frame_id = LaunchConfiguration('frame_id', default='laser_frame')
     frame_id2 = LaunchConfiguration('frame_id', default='laser_frame2')
