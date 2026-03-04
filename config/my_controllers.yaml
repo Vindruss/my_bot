@@ -8,6 +8,15 @@ controller_manager:
     mecanum_controller:
       type: mecanum_drive_controller/MecanumDriveController
 
+    linear_axis_controller:
+      type: forward_command_controller/ForwardCommandController
+
+linear_axis_controller:
+  ros__parameters:
+    joints:
+      - linear_axis_joint
+    interface_name: velocity
+
 mecanum_controller:
   ros__parameters:
     reference_timeout: 5.0
